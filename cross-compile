@@ -1,0 +1,7 @@
+#!/bin/sh
+
+prog_name="$(basename "$PWD")"
+export GOARCH=amd64
+
+GOOS=linux go build -ldflags='-s -w' -o ./release/"${prog_name}"
+GOOS=windows go build -ldflags='-s -w' -o ./release/"${prog_name}.exe"
