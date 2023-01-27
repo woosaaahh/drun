@@ -29,5 +29,5 @@ func main() {
 		log.Fatal(err)
 	}
 
-	log.Printf("%s (pid:%d)", strings.Join(args, " "), cmd.Process.Pid)
+	log.Printf("(pid:%d) %s ", cmd.Process.Pid, strings.Join(args, " "))
 }
